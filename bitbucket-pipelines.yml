@@ -13,3 +13,4 @@ pipelines:
                 S3_BUCKET: "halab.info"
                 LOCAL_PATH: $BITBUCKET_CLONE_DIR # This is the base directory of your repository.
                 #DELETE_FLAG: "true"
+
