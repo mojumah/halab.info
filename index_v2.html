@@ -225,7 +225,10 @@ Sabah Fakhri in a concert in Aleppo's Touring Club...
 
 <p>
 <h1>Education</h1>
-School education is mandatory and free, the highest degree in school is called the Bacalorya.
+School education is mandatory and free, the highest degree in school is called the Bacalorya. Which is known to be very difficult and complicated.
+Top students go to medicine school. The education mile stone before is the 9th grade, called Prouver. 
+The society conciders students who get a high grade in the 9th grade that enables them to continue science related theoretical studies, 'better' than those who 
+achive less and therefore have to go to a technical school.
 
 <style style="text/css">
   .marquee-outer {
@@ -283,5 +286,82 @@ School education is mandatory and free, the highest degree in school is called t
   </div>
   
   </p>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    function submitToAPI(e) {
+        e.preventDefault();
+        var URL = "https://q1gttc2hp6.execute-api.eu-west-2.amazonaws.com/prod/asker";
+    
+        var Namere = /[A-Za-z]{1}[A-Za-z]/;
+        if (!Namere.test($("#name-input").val())) {
+            alert("Name can not be less than 2 letters");
+            return;
+        }
+        var mobilere = /[0-9]{10}/;
+        if (!mobilere.test($("#phone-input").val())) {
+            alert("Please enter valid mobile number");
+            return;
+        }
+        if ($("#email-input").val() == "") {
+           alert("Please enter your email id");
+            return;
+        }
+    
+        var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
+        if (!reeamil.test($("#email-input").val())) {
+            alert("Please enter valid email address");
+            return;
+        }
+    
+        var name = $("#name-input").val();
+        var phone = $("#phone-input").val();
+        var email = $("#email-input").val();
+        var desc = $("#description-input").val();
+        var data = {
+            name: name,
+            phone: phone,
+            email: email,
+            desc: desc
+        };
+    
+        $.ajax({
+            type: "POST",
+            url: "https://q1gttc2hp6.execute-api.eu-west-2.amazonaws.com/prod/asker",
+            dataType: "json",
+            crossDomain: "true",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(data),
+    
+            success: function() {
+                // clear form and show a success message
+                alert("Successfull");
+                document.getElementById("contact-form").reset();
+                location.reload();
+            }
+            //error: function() {
+                // show an error message
+            //    alert("UnSuccessfull");
+            //}
+        });
+    }
+    </script>
+    </head>
+    <body>
+    <h1>Do you want volunteer to work jointly on building this website about Aleppo ?</h1>
+        <form id="contact-form" method="post">
+            <h4>Name:</h4>
+            <input type="text" style="height:35px;" id="name-input" placeholder="Enter name here…" class="form-control" style="width:100%;" /><br/>
+            <h4>Phone:</h4>
+            <input type="phone" style="height:35px;" id="phone-input" placeholder="Enter phone number" class="form-control" style="width:100%;"/><br/>
+            <h4>Email:</h4>
+            <input type="email" style="height:35px;" id="email-input" placeholder="Enter email here…" class="form-control" style="width:100%;"/><br/>
+            <h4>How can you help?</h4>
+            <textarea id="description-input" rows="3" placeholder="Enter your message…" class="form-control" style="width:100%;"></textarea><br/>
+            <div class="g-recaptcha" data-sitekey="6Lc7cVMUAAAAAM1yxf64wrmO8gvi8A1oQ_ead1ys" class="form-control" style="width:100%;"></div>
+            <button type="button" onClick="submitToAPI(event)" class="btn btn-lg" style="margin-top:20px;">Submit</button>
+        </form>
+    
+    </body>
 </body>
 </html>
