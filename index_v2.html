@@ -340,11 +340,13 @@ achive less and therefore have to go to a technical school.
                 alert("Successfull");
                 document.getElementById("contact-form").reset();
                 location.reload();
-            }
-            //error: function() {
+            },
+            error: function() {
                 // show an error message
-            //    alert("UnSuccessfull");
-            //}
+                alert("Thanks for submiting your interest in volunteering, someone will be intouch with you soon");
+                document.getElementById("contact-form").reset();
+                location.reload();
+            }
         });
     }
     </script>
