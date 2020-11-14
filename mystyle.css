@@ -1,6 +1,11 @@
 body {
   @charset "UTF-8";
-  @import url("https://use.typekit.net/mdv5bbe.css");
-  font-family: six-hands-brush, sans-serif;
+  /* @import url("https://use.typekit.net/mdv5bbe.css"); */
+  font-family: ubuntu, serif;
   font-size: 30px;
+
+  div {
+    text-align: justify;
+    text-justify: inter-word;
+  }
 }
