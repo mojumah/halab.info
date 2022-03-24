@@ -1,0 +1,12 @@
+body {
+  @charset "UTF-8";
+  /* @import url("https://use.typekit.net/mdv5bbe.css"); */
+  @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 30px;
+
+  div {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
