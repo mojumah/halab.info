@@ -20,3 +20,4 @@
 /photos/2008_Citadel.jpg filter=lfs diff=lfs merge=lfs -text
 /photos/2021_Minecraft_City.png filter=lfs diff=lfs merge=lfs -text
 /photos/Antakya.jpg filter=lfs diff=lfs merge=lfs -text
+/videos/Sabah_Fhakri_Touring_Club_Edited.mp4 filter=lfs diff=lfs merge=lfs -text
