@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<p>In Arabic-Aleppo what is the word for Watermelon?</p>
+<p><h1>Which fruit has a pink colour, many small black seeds, and a hard green rind?<h1></p>
 
 <button onclick="myFunction()">Click to answer</button>
 
@@ -10,14 +10,15 @@
 
 <script>
 function myFunction() {
-  let fruit = prompt("Please enter the word for Watemelon in Arabic-Aleppo");
-  if (fruit != "جبسة") {
+  let fruit = prompt("Type a fruit name in lowercase");
+  if (fruit != "watermelon") {
     document.getElementById("demo").innerHTML =
-    "No " + fruit + " does not mean Watermelon in Arabic-Aleppo";
+    "No " + fruit + " is not the right answer, try again";
 
   }
   else {
-    "Yes" +fruit + "means Watermelon in Arabic-Aleppo";
+    document.getElementById("demo").innerHTML =
+    "Yes, the word for " +fruit + " in Arabic-Aleppo is ...";
     function display_image(src, alt) {
     var a = document.createElement("img");
     a.src = src;
@@ -26,15 +27,15 @@ function myFunction() {
     a.alt = alt;
     document.body.appendChild(a);
 }
-display_image('./images/watermelon.PNG', 
-              './images/watermelon.PNG');
+display_image('watermelon.PNG', 
+              'watermelon.PNG');
   
   }
 }
 
 </script>
 
-<button onClick="window.location.reload();">Press to play again</button>
+<button onClick="window.location.reload();">Press to try again</button>
 
 </body>
 </html>
