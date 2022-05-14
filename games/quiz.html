@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>In Arabic-Aleppo what is the word for Watermelon?</p>
+
+<button onclick="myFunction()">Click to answer</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let fruit = prompt("Please enter the word for Watemelon in Arabic-Aleppo");
+  if (fruit != "جبسة") {
+    document.getElementById("demo").innerHTML =
+    "No " + fruit + " does not mean Watermelon in Arabic-Aleppo";
+
+  }
+  else {
+    "Yes" +fruit + "means Watermelon in Arabic-Aleppo";
+    function display_image(src, alt) {
+    var a = document.createElement("img");
+    a.src = src;
+//    a.width = width;
+//    a.height = height;
+    a.alt = alt;
+    document.body.appendChild(a);
+}
+display_image('./images/watermelon.PNG', 
+              './images/watermelon.PNG');
+  
+  }
+}
+
+</script>
+
+<button onClick="window.location.reload();">Press to play again</button>
+
+</body>
+</html>
