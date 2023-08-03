@@ -26,3 +26,5 @@ jobs:
           role-session-name: MySessionName        
       - run: |
           aws s3 ls
+
+##
