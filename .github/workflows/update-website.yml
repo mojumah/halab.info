@@ -7,11 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Install pdftk
+      - name: checkout-repo
         uses: actions/checkout@v3
       - run: |
           sudo apt update -y
-          sudo wget http://archive.ubuntu.com/ubuntu/pool/universe/p/pdftk/pdftk_2.02-5_amd64.deb
       - uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -23,6 +22,4 @@ jobs:
           role-session-name: MySessionName        
       - run: |
           ls -la
-#######          aws s3 sync s3://halab.info 
-
-#######
+          aws s3 sync . s3://halab.info 
