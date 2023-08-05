@@ -156,6 +156,36 @@ Listen to more facts using this free to enable <a href="https://www.amazon.co.uk
         }
         </script>
 
+<h3 class="w4-center">Five Hundred Syrian Pounds, 1998</h3>
+
+<div class="w4-content w4-display-container">
+  <img class="mySlides_two" src="https://s3.eu-west-2.amazonaws.com/halab.info/numismatics/five_hundred_a.jpg" style="width:30%">
+  <img class="mySlides_two" src="https://s3.eu-west-2.amazonaws.com/halab.info/numismatics/five_hundred_b.jpg" style="width:30%">
+
+  <button class="w4-button w4-black w4-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w4-button w3-black w4-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+    showDivs(slideIndex += n);
+    }
+
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides_two");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          x[slideIndex-1].style.display = "block";
+        }
+        </script>
+
 </p>
 
 <p>
