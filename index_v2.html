@@ -158,13 +158,13 @@ Listen to more facts using this free to enable <a href="https://www.amazon.co.uk
 
 <script>
     var slideIndex = 1;
-    showDivs(slideIndex);
+    showDivs_two(slideIndex);
 
-    function plusDivs(n) {
-    showDivs(slideIndex += n);
+    function plusDivs_two(n) {
+    showDivs_two(slideIndex += n);
     }
 
-        function showDivs(n) {
+        function showDivs_two(n) {
           var i;
           var x = document.getElementsByClassName("mySlides_two");
           if (n > x.length) {slideIndex = 1}
@@ -188,13 +188,13 @@ Listen to more facts using this free to enable <a href="https://www.amazon.co.uk
 
 <script>
     var slideIndex = 1;
-    showDivs(slideIndex);
+    showDivs_three(slideIndex);
 
-    function plusDivs(n) {
-    showDivs(slideIndex += n);
+    function plusDivs_three(n) {
+    showDivs_three(slideIndex += n);
     }
 
-        function showDivs(n) {
+        function showDivs_three(n) {
           var i;
           var x = document.getElementsByClassName("mySlides_three");
           if (n > x.length) {slideIndex = 1}
@@ -211,47 +211,68 @@ Listen to more facts using this free to enable <a href="https://www.amazon.co.uk
 <p>
 <h1>Photos</h1>
 
-<div class="gallery">
-  <a target="_blank" href="https://s3.eu-west-2.amazonaws.com/halab.info/photos/1990s_Aleppo_Heinz_Renate_Visit_0022_a.jpg">
-    <img src="https://s3.eu-west-2.amazonaws.com/halab.info/photos/1990s_Aleppo_Heinz_Renate_Visit_0022_a.jpg" alt="image not available" width="600" height="400">
-  </a>
-  <div class="desc">Saint Simon Church </div>
-</div>
+<table>
 
-<div class="gallery">
-  <a target="_blank" href="https://s3.eu-west-2.amazonaws.com/halab.info/photos/1990s_Aleppo_Heinz_Renate_Visit_0054_a.jpg">
-    <img src="https://s3.eu-west-2.amazonaws.com/halab.info/photos/1990s_Aleppo_Heinz_Renate_Visit_0054_a.jpg" alt="image not available" width="600" height="400">
-  </a>
-  <div class="desc">An Arabic house in Aleppo </div>
-</div>
+  <tr>
+    <th>
+      <div class="gallery">
+        <a target="_blank" href="https://s3.eu-west-2.amazonaws.com/halab.info/photos/1990s_Aleppo_Heinz_Renate_Visit_0022_a.jpg">
+          <img src="https://s3.eu-west-2.amazonaws.com/halab.info/photos/1990s_Aleppo_Heinz_Renate_Visit_0022_a.jpg" alt="image not available" width="600" height="400">
+        </a>
+        <div class="desc">Saint Simon Church </div>
+      </div>
+    </th>
 
-<div class="gallery">
-  <a target="_blank" href="https://s3.eu-west-2.amazonaws.com/halab.info/photos/Antakya.jpg">
-    <img src="https://s3.eu-west-2.amazonaws.com/halab.info/photos/Antakya.jpg" alt="image not available" width="600" height="400">
-  </a>
-  <div class="desc">Family in the Sanjak of Alexandretta </div>
-</div>
+    <th>
+      <div class="gallery">
+        <a target="_blank" href="https://s3.eu-west-2.amazonaws.com/halab.info/photos/1990s_Aleppo_Heinz_Renate_Visit_0054_a.jpg">
+          <img src="https://s3.eu-west-2.amazonaws.com/halab.info/photos/1990s_Aleppo_Heinz_Renate_Visit_0054_a.jpg" alt="image not available" width="600" height="400">
+        </a>
+        <div class="desc">An Arabic house in Aleppo </div>
+      </div>
+    </th>
 
-<div class="gallery">
-  <a target="_blank" href="https://s3.eu-west-2.amazonaws.com/halab.info/photos/1955_Muslimya.jpg">
-    <img src="https://s3.eu-west-2.amazonaws.com/halab.info/photos/1955_Muslimya.jpg" alt="image not available" width="600" height="400">
-  </a>
-  <div class="desc">Family in a suberb north of Aleppo </div>
-</div>
+    <th>
+      <div class="gallery">
+        <a target="_blank" href="https://s3.eu-west-2.amazonaws.com/halab.info/photos/Antakya.jpg">
+          <img src="https://s3.eu-west-2.amazonaws.com/halab.info/photos/Antakya.jpg" alt="image not available" width="600" height="400">
+        </a>
+        <div class="desc">Family in the Sanjak of Alexandretta </div>
+      </div>
+    </th>
+  </tr>
 
-<div class="gallery">
-  <a target="_blank" href="https://s3.eu-west-2.amazonaws.com/halab.info/photos/donkey-and-friends.jpg">
-    <img src="https://s3.eu-west-2.amazonaws.com/halab.info/photos/donkey-and-friends.jpg" alt="image not available" width="600" height="400">
-  </a>
-  <div class="desc">A Donkey and friends </div>
-</div>
+  <tr>
+    <th>
+      <div class="gallery">
+        <a target="_blank" href="https://s3.eu-west-2.amazonaws.com/halab.info/photos/1955_Muslimya.jpg">
+          <img src="https://s3.eu-west-2.amazonaws.com/halab.info/photos/1955_Muslimya.jpg" alt="image not available" width="600" height="400">
+        </a>
+        <div class="desc">Family in a suberb north of Aleppo </div>
+      </div>
+    </th>
 
-<div class="gallery">
-  <a target="_blank" href="https://s3.eu-west-2.amazonaws.com/halab.info/photos/old-lady.jpg">
-    <img src="https://s3.eu-west-2.amazonaws.com/halab.info/photos/old-lady.jpg" alt="image not available" width="600" height="400">
-  </a>
-  <div class="desc">A woman sitting on the floor next to a fuel oil heater and baking </div>
-</div>
+    <th>
+      <div class="gallery">
+        <a target="_blank" href="https://s3.eu-west-2.amazonaws.com/halab.info/photos/donkey-and-friends.jpg">
+          <img src="https://s3.eu-west-2.amazonaws.com/halab.info/photos/donkey-and-friends.jpg" alt="image not available" width="600" height="400">
+        </a>
+        <div class="desc">A Donkey and friends </div>
+      </div>
+    </th>
+
+    <th>
+      <div class="gallery">
+        <a target="_blank" href="https://s3.eu-west-2.amazonaws.com/halab.info/photos/old-lady.jpg">
+          <img src="https://s3.eu-west-2.amazonaws.com/halab.info/photos/old-lady.jpg" alt="image not available" width="600" height="400">
+        </a>
+        <div class="desc">A woman baking on the floor next to a fuel oil heater </div>
+      </div>
+    </th>
+
+  </tr>
+
+</table>
 
 </p>
 
