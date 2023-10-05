@@ -1,0 +1,45 @@
+<html>
+
+<body>
+
+<header>
+<h1>The Dice<h1>
+</header>
+
+<button onClick="window.location.reload();">Press the button to roll the dice</button>
+</br>
+</br>
+
+<script>
+var arr = ['1', '2', '3', '4', '5', '6'];
+var i = arr.length, j, temp;
+while(--i > 0) {
+    j = Math.floor(Math.random() * (i+1));
+    temp = arr[j];
+    arr[j] = arr[i];
+    arr[i] = temp;
+}
+
+let array = arr[0];
+document.write(array);
+
+</script>
+
+<br/>
+
+<script>
+    var arr_2 = ['1', '2', '3', '4', '5', '6'];
+    var i = arr_2.length, j, temp;
+    while(--i > 0) {
+        j = Math.floor(Math.random() * (i+1));
+        temp = arr_2[j];
+        arr_2[j] = arr_2[i];
+        arr_2[i] = temp;
+    }
+    
+    let array_2 = arr_2[0];
+    document.write(array_2);
+    
+    </script>
+</body>
+</html>
