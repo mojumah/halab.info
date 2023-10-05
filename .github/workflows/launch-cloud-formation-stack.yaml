@@ -22,4 +22,4 @@ jobs:
           role-session-name: MySessionName        
       - run: |
           ls -la
-          aws s3 sync . s3://halab.info 
+          aws s3 sync . s3://halab.info
