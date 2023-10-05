@@ -1,4 +1,4 @@
-name: launching CloudFormation Syntax
+name: updating website
 
 run-name: ${{ github.actor }} is updating the website
 on: [workflow_dispatch]
@@ -21,6 +21,5 @@ jobs:
           role-duration-seconds: 1200
           role-session-name: MySessionName        
       - run: |
-          cd CloudFormation
           ls -la
-          aws cloudformation create-stack --stack-name soup --template-body file://pudding.yaml
+          aws s3 sync . s3://halab.info 
