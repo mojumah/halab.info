@@ -1,7 +1,7 @@
 name: updating website
 
 run-name: ${{ github.actor }} is updating the website
-on: [workflow_dispatch]
+on: [push]
 jobs:
   update-s3-website:
     runs-on: ubuntu-latest
